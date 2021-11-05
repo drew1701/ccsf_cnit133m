@@ -1,0 +1,87 @@
+<!DOCTYPE html> <!-- CNIT133M Homework 04 - Andrew Patrick - apatric1@mail.ccsf.edu -->
+<html lang="en">
+<head>
+  <title>CNIT133m Homework 4</title>  
+  <meta charset="utf-8" />
+  <meta name="description" content="CNIT133M Homework4 Exercises">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/cnit133m_hw4.css">
+  
+  <link rel="apple-touch-icon" sizes="57x57" href="icon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="icon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="icon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="icon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="icon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="icon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="icon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="icon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="icon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512"  href="icon/android-icon-512x512.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="icon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="icon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="hw4 apatric1">
+  <meta name="apple-mobile-web-app-title" content="hw4 apatric1">
+  <meta name="msapplication-starturl" content="/~apatric1/cnit133m/hw4/">
+
+</head>
+
+<body>
+
+<header>
+  <h1>Progressive Web Applications</h1>
+</header>
+
+<main>
+
+  <div class="dropdown">
+    <button class="dropbtn">Choose a Background Image</button>
+    <div class="dropdown-content">
+      <button type="button" onclick="changeBkg(1)">I would like to have a Blue Background</button>
+      <button type="button" onclick="changeBkg(2)">I really like the shiny Gold Background</button>
+      <button type="button" onclick="changeBkg(3)">How about we go back to a plain white Background?</button>
+    </div>
+  </div>
+
+  <p>Progressive Web Applications (PWA) are web based applications that are written with enhancements that give them many of the features often found only in desktop applications. A well written PWA can open quickly even with low network bandwidth and cache files using a Service Worker. By implimenting a manifest file the PWA can also simulate an installed application with a launch icon and window of its own.</p>
+  <p>The three main points that define a PWA are capable, reliable, and installable. PWA's can create local databases and use offline storage so they are capable, they can also cache files and operate offline for reliability, and a PWA can be installed to the machine with a launch icon so it feels like a stand alone application. Once a PWA is installed on a machine or device it operates in it's own window, separate from the browser so it can be access via ALT-Tab or other application switching methods.</p>
+  
+
+
+</main>
+
+
+<script>
+
+function changeBkg(i) {
+  if (i === 1) {
+    document.body.style.backgroundImage = "url('images/lightblue.jpg')"; 
+  } else if (i === 2) {
+    document.body.style.backgroundImage = "url('images/lightgold.jpg')";     
+  } else {
+    document.body.style.backgroundImage = "url('')";     
+  }
+}
+
+if (navigator.serviceWorker) {
+    window.addEventListener('load', () => {
+	   navigator.serviceWorker.register('./service-worker.js')
+	      .then(registration => console.log('SW registered'))
+		  .catch(err => console.log(`SW not registered - Error: ${err}`))
+    })
+} else {
+    console.log('Service Worker is not supported in this browser.')
+}
+
+</script>
+
+</body>
+</html> 

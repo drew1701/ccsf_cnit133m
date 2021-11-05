@@ -1,0 +1,117 @@
+<!DOCTYPE html> <!-- CNIT133M Homework 'Short Task 1' - Andrew Patrick - apatric1@mail.ccsf.edu -->
+<html lang="en">
+<head>
+  <title>CNIT133m Homework Short Task 1</title>  
+  <meta charset="utf-8" />
+  <meta name="description" content="CNIT133M Homework Short Task 1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  
+  <link rel="stylesheet" href="bootstrap.min.css">
+  
+  <link rel="apple-touch-icon" sizes="57x57" href="icon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="icon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="icon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="icon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="icon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="icon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="icon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="icon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="icon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="icon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="icon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="ST1 - Frameworks">
+  <meta name="apple-mobile-web-app-title" content="ST1 - Frameworks">
+  <meta name="msapplication-starturl" content="https://hills.ccsf.edu/~apatric1/cnit133m/st1/index.html">
+
+</head>
+
+<body class="container-fluid">
+
+<header class="my-4 py-3 container border border-info shadow text-center">
+  <h1>Cross Platform Frameworks<br/><small>for Mobile App Development</small></h1>
+</header>
+
+
+
+
+<section class="card-deck">
+  <div class="card bg-light">
+    <div class="card-header text-center">Ionic</div>
+    <div class="card-body">
+      <img class="img-fluid mx-auto d-block" src="ionic-logo_300x300t.png" alt="Ionic Logo" width="300px" height="300px">
+      <h2 class="mt-2 card-title">Ionic</h2>
+      <ul class="list-group">
+        <li class="list-group-item">Older (Cordova)</li>
+        <li class="list-group-item">Creates (Hybrid) Native Apps</li>
+        <li class="list-group-item">HTML5, CSS, JavaScript</li>
+      </ul>
+      <p class="mt-3 card-text">The Ionic framework is one of the older systems and has a large developer and user community. Generally apps are written in HTML5/CSS/JS and then wrapped in the Cordova wrapper to produce a Hybrid/Native app experience. Developers love it because it does not generally require learning any new languages.</p>
+    </div>
+    <div class="card-footer bg-white">
+      <a href="https://ionicframework.com/" class="card-link">https://ionicframework.com/</a>
+    </div>
+  </div>
+  <div class="card bg-light">
+    <div class="card-header text-center">React Native</div>
+    <div class="card-body">
+      <img class="img-fluid mx-auto d-block" src="react-logo_300x300t.png" alt="React Native Logo" width="300px" height="300px">
+      <h2 class="mt-2 card-title">React Native</h2>
+      <ul class="list-group">
+        <li class="list-group-item">Widest Use (Facebook)</li>
+        <li class="list-group-item">Creates Native Apps</li>
+        <li class="list-group-item">React Library, JavaScript</li>
+      </ul>
+      <p class="mt-3 card-text">React Native has the largest adoption across the web. It was originally developed at Facebook and is new but has rapidly grown to be used by many cutting edge online companies. Development is done in JavaScript using the React Library so the learning curve is very simple. React Native produces true native apps and has the support of leading developer groups.</p>
+    </div>
+    <div class="card-footer bg-white">
+      <a href="https://reactnative.dev/" class="card-link">https://reactnative.dev/</a>
+    </div>
+  </div>
+  <div class="card bg-light">
+    <div class="card-header text-center">Flutter</div>
+    <div class="card-body">
+      <img class="img-fluid mx-auto d-block" src="flutter-logo_300x300t.png" alt="Flutter Logo" width="300px" height="300px">
+      <h2 class="mt-2 card-title">Flutter</h2>
+      <ul class="list-group">
+        <li class="list-group-item">Newest (Google)</li>
+        <li class="list-group-item">Creates Native Apps</li>
+        <li class="list-group-item">Dart (New Language)</li>
+      </ul>      
+      <p class="mt-3 card-text">Flutter is an exciting new framework developed by Google. Flutter offers some great new features and performance but it requires learning a new language developed by Google called Dart. Flutter is the newest offering on the market but has the backing of one of the largest web companies on the planet. As more and more developers learn Dart, this will be a growing option in the market.</p>
+    </div>
+    <div class="card-footer bg-white">
+      <a href="https://flutter.dev/" class="card-link">https://flutter.dev/</a>
+    </div>
+  </div>
+
+</section>
+
+<section class="container my-4">&nbsp;</section>
+
+<script src="jquery-3.5.1.slim.min.js"></script>
+<script src="bootstrap.bundle.min.js"></script>
+
+<script>
+if (navigator.serviceWorker) {
+    window.addEventListener('load', () => {
+	   navigator.serviceWorker.register('./service-worker.js')
+	      .then(registration => console.log('SW registered'))
+		  .catch(err => console.log(`SW not registered - Error: ${err}`))
+    })
+} else {
+    console.log('Service Worker is not supported in this browser.')
+}
+</script>
+
+
+
+</body>
+</html> 

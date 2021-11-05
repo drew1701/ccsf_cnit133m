@@ -1,0 +1,20 @@
+ /* CNIT133m Homework 03 - Andrew Patrick - apatric1@mail.ccsf.edu */
+ 
+a.foot:link, a.foot:visited, a.foot:hover {
+  color:white;
+}
+
+h2 {
+  text-align: center;
+  margin-top: .75em;
+}
+
+h3 {
+  color: blue;
+}
+
+#hw3map {
+  height: 500px;
+}
+
+
